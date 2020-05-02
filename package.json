@@ -1,0 +1,28 @@
+{
+  "name": "re-frame-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.8.109"
+  },
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "build": "npm run clean && shadow-cljs release app",
+    "clean": "rm -rf public/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P233/re-frame-template.git"
+  },
+  "author": "Peiwen Lu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/P233/re-frame-template/issues"
+  },
+  "homepage": "https://github.com/P233/re-frame-template#readme"
+}
