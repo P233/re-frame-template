@@ -1,16 +1,14 @@
 (ns app.core
   (:require [reagent.dom :as rdom]
-            [app.styles :as styles]))
+            [re-frame.core :as rf]
+            [app.views :as views]
+            [app.events]
+            [app.subs]))
 
-(defn app
-  []
-  [:h1 {:class styles/block__element--modifier} "Hello, world!"])
-
-(defn ^:dev/after-load mount
-  []
-  (rdom/render [app]
+(defn ^:dev/after-load mount []
+  (rdom/render [views/page]
     (.getElementById js/document "app")))
 
-(defn ^:export init
-  []
+(defn ^:export init []
+  (rf/dispatch-sync [:initialize-db])
   (mount))
