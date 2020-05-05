@@ -1,4 +1,6 @@
 .DS_Store
-.shadow-cljs/
+.shadow-cljs
 /node_modules
 /public/js
+/public/css
+/src/app/styles.cljs

@@ -1,9 +1,10 @@
 (ns app.core
-  (:require [reagent.dom :as rdom]))
+  (:require [reagent.dom :as rdom]
+            [app.styles :as styles]))
 
 (defn app
   []
-  [:div "Hello, world!"])
+  [:h1 {:class styles/block__element--modifier} "Hello, world!"])
 
 (defn ^:dev/after-load mount
   []

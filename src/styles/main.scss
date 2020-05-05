@@ -1,0 +1,11 @@
+$margin: 0;
+
+:global body {
+  margin: $margin;
+  user-select: none;
+}
+
+.block__element--modifier {
+  color: red;
+  margin: $margin;
+}
