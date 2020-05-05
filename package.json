@@ -11,6 +11,8 @@
     "autoprefixer": "^9.7.6",
     "concurrently": "^5.2.0",
     "css-loader-minify-class": "^1.3.0",
+    "highlight.js": "^9.18.1",
+    "react-highlight.js": "^1.0.7",
     "rollup": "^2.7.6",
     "rollup-plugin-postcss": "^3.1.1",
     "sass": "^1.26.5",
