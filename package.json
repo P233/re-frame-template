@@ -20,7 +20,7 @@
   },
   "scripts": {
     "watch:sass": "rollup -c -w",
-    "build:sass": "NODE_ENV=production rollup -c",
+    "build:sass": "rollup -c",
     "watch:cljs": "shadow-cljs watch app",
     "build:cljs": "shadow-cljs release app",
     "dev": "concurrently 'npm:watch:sass' 'npm:watch:cljs'",

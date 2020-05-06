@@ -3,7 +3,7 @@ import autoprefixer from "autoprefixer";
 import postcss from "rollup-plugin-postcss";
 import { Minifier } from "css-loader-minify-class";
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = !process.env.ROLLUP_WATCH;
 
 const minifier = new Minifier({ prefix: "_" }).getLocalIdent;
 const minifyClassname = localName => {
