@@ -6,7 +6,7 @@ This package is built to experiment with the toolchain and workflow for developi
 - [x] devtools and re-frame-10x
 - [x] Sass (via PostCSS) / Autoprefixer / CSS Modules / [Minify Class](https://github.com/odensc/css-loader-minify-class) [1]
 - [x] stylelint pre-commit hook
-- [ ] cljs lint
+- [x] clj-kondo lint
 - [ ] cljs formatter
 - [ ] test
 
