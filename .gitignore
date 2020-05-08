@@ -1,5 +1,7 @@
 .DS_Store
 .shadow-cljs
+.clj-kondo/*
+!.clj-kondo/.gitkeep
 /node_modules
 /public/js
 /public/css
