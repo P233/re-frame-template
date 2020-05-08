@@ -33,18 +33,18 @@
     "stylelint": "^13.3.3"
   },
   "scripts": {
+    "_cljfmt": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main",
     "watch:sass": "rollup -c -w",
     "build:sass": "rollup -c",
     "lint:sass": "stylelint --fix src/styles",
     "watch:cljs": "shadow-cljs watch app",
     "build:cljs": "shadow-cljs release app",
     "lint:cljs": "clj-kondo --lint src",
+    "cljfmt": "npm run _cljfmt fix src shadow-cljs.edn",
     "dev": "concurrently 'npm:watch:sass' 'npm:watch:cljs'",
     "build": "npm run clean && npm run build:sass && npm run build:cljs",
     "clean": "rm -rf public/js public/css src/app/styles.cljs",
-    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html",
-    "cljfmt": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main fix src",
-    "cljfmt:check": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main check src"
+    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html"
   },
   "husky": {
     "hooks": {
@@ -52,9 +52,9 @@
     }
   },
   "lint-staged": {
-    "*.cljs": [
+    "*.{cljs,edn}": [
       "clj-kondo --lint",
-      "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main fix"
+      "npm run _cljfmt fix"
     ],
     "*.scss": [
       "stylelint --fix",
