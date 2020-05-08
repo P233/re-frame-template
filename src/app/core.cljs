@@ -7,7 +7,7 @@
 
 (defn ^:dev/after-load mount []
   (rdom/render [views/page]
-    (.getElementById js/document "app")))
+               (.getElementById js/document "app")))
 
 (defn ^:export init []
   (rf/dispatch-sync [:initialize-db])

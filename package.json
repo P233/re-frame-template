@@ -42,7 +42,9 @@
     "dev": "concurrently 'npm:watch:sass' 'npm:watch:cljs'",
     "build": "npm run clean && npm run build:sass && npm run build:cljs",
     "clean": "rm -rf public/js public/css src/app/styles.cljs",
-    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html"
+    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html",
+    "cljfmt": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main fix src",
+    "cljfmt:check": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main check src"
   },
   "husky": {
     "hooks": {
@@ -51,7 +53,8 @@
   },
   "lint-staged": {
     "*.cljs": [
-      "clj-kondo --lint"
+      "clj-kondo --lint",
+      "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.4\"}}}' -m cljfmt.main fix"
     ],
     "*.scss": [
       "stylelint --fix",

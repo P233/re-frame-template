@@ -3,7 +3,6 @@
    [re-frame.core :as rf]
    [app.styles :as styles]))
 
-
 (defn increase-button []
   [:button
    {:on-click #(rf/dispatch [:increase-counter])}
