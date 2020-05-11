@@ -15,7 +15,8 @@
                 :dev {:closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}}
                 :devtools {:http-root "public"
                            :http-port 3000
-                           :preloads [day8.re-frame-10x.preload]}}
+                           :preloads [day8.re-frame-10x.preload
+                                      shadow.remote.runtime.cljs.browser]}}
 
           :browser-test {:target :browser-test
                          :ns-regexp "-test$"
