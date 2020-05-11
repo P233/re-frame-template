@@ -15,7 +15,14 @@
                 :dev {:closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}}
                 :devtools {:http-root "public"
                            :http-port 3000
-                           :preloads [day8.re-frame-10x.preload]}}}
+                           :preloads [day8.re-frame-10x.preload]}}
+
+          :browser-test {:target :browser-test
+                         :ns-regexp "-test$"
+                         :runner-ns shadow.test.browser
+                         :test-dir "test-output/browser-test"
+                         :devtools {:http-root "test-output/browser-test"
+                                    :http-port 3001}}}
 
  :repositories {"central" {:url "https://maven.aliyun.com/nexus/content/groups/public/"}
                 "clojars" {:url "https://mirrors.ustc.edu.cn/clojars/"}

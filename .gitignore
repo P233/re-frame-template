@@ -3,6 +3,7 @@
 .clj-kondo/*
 !.clj-kondo/.gitkeep
 /node_modules
+/test-output
 /public/js
 /public/css
 /src/app/styles.cljs

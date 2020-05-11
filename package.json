@@ -39,6 +39,7 @@
     "watch:cljs": "shadow-cljs watch app",
     "build:cljs": "shadow-cljs release app",
     "lint:cljs": "clj-kondo --lint src",
+    "watch:test": "shadow-cljs watch browser-test",
     "cljfmt": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.7\"}}}' -m cljfmt.main fix src shadow-cljs.edn",
     "cljfmt:check": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.6.7\"}}}' -m cljfmt.main check src shadow-cljs.edn || true",
     "dev": "concurrently 'npm:watch:sass' 'npm:watch:cljs'",

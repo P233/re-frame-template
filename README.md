@@ -8,8 +8,8 @@ This package is built to experiment with the toolchain and workflow for developi
 - [x] stylelint command and pre-commit hook
 - [x] clj-kondo lint command and pre-commit hook **[2]**
 - [x] cljfmt commands and pre-commit hook **[3]**
+- [x] shadow-cljs browser testing
 - [x] npm mirror and maven mirror **[4]**
-- [ ] test
 
 **[1]**: Inspired by [ghivert/modular-styles](https://github.com/ghivert/modular-styles). Please see [the rollup configuration file](https://github.com/P233/re-frame-template/blob/master/rollup.config.js) for more details. \
 **[2]**: You'll need to [install clj-kondo globally](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md). \
