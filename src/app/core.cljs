@@ -6,6 +6,7 @@
             [app.subs]))
 
 (defn ^:dev/after-load mount []
+  (rf/clear-subscription-cache!)
   (rdom/render [views/page]
                (.getElementById js/document "app")))
 
