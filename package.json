@@ -37,15 +37,14 @@
     "watch:sass": "rollup -c -w",
     "build:sass": "rollup -c",
     "lint:sass": "stylelint --fix src/styles",
-    "watch:cljs": "shadow-cljs watch app",
+    "watch:cljs": "shadow-cljs watch app browser-test",
     "build:cljs": "shadow-cljs release app",
     "lint:cljs": "clj-kondo --lint src",
-    "watch:test": "shadow-cljs watch browser-test",
     "cljfmt": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.7.0\"}}}' -m cljfmt.main fix src shadow-cljs.edn",
     "cljfmt:check": "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.7.0\"}}}' -m cljfmt.main check src shadow-cljs.edn || true",
-    "dev": "concurrently 'npm:watch:sass' 'npm:watch:cljs'",
+    "dev": "npm run clean && concurrently 'npm:watch:sass' 'npm:watch:cljs'",
     "build": "npm run clean && npm run build:sass && npm run build:cljs",
-    "clean": "rm -rf public/js public/css src/app/styles.cljs",
+    "clean": "rm -rf public/js public/css src/app/styles.cljs test-output",
     "build-report": "shadow-cljs run shadow.cljs.build-report app report.html"
   },
   "husky": {
@@ -59,8 +58,8 @@
       "clojure -Sdeps '{:deps {cljfmt {:mvn/version \"0.7.0\"}}}' -m cljfmt.main fix"
     ],
     "*.scss": [
-      "stylelint --fix",
-      "prettier --write"
+      "prettier --write",
+      "stylelint --fix"
     ]
   }
 }
