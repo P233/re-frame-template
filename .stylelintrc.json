@@ -10,7 +10,6 @@
   "extends": [
     "@p233/stylelint-config-scss",
     "@p233/stylelint-config-scss/order-bootstrap",
-    "@p233/stylelint-config-scss/no-prefixes",
-    "@p233/stylelint-config-scss/strict"
+    "@p233/stylelint-config-scss/no-prefixes"
   ]
 }
