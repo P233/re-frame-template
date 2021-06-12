@@ -43,12 +43,8 @@
     "dev": "npm run clean && concurrently 'npm:watch:sass' 'npm:watch:cljs'",
     "build": "npm run clean && npm run build:sass && npm run build:cljs",
     "clean": "rm -rf public/js public/css src/app/styles.cljs test-output",
-    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "build-report": "shadow-cljs run shadow.cljs.build-report app report.html",
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{cljs,edn}": [
